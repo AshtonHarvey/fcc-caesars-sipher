@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caesars Sipher</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <script src="./js/Main.js" defer></script>
+  </head>
+  <body
+    class="flex justify-center items-center min-h-screen text-center bg-slate-50">
+    <form
+      action="javascript:handleSubmit()"
+      class="flex flex-col justify-center items-center bg-cyan-400 rounded-md p-4 shadow-md">
+      <h1 class="text-4xl font-bold text-amber-500 mb-6">
+        Caesars sipher solver
+      </h1>
+      <!-- <label for="input">ROT13 spher</label> -->
+      <input
+        id="input"
+        name="input"
+        type="text"
+        placeholder="Enter text"
+        class="text-center border-2 border-slate-500 rounded-md p-1 mb-6 w-full" />
+      <p
+        id="output"
+        class="border-2 border-slate-500 p-2 bg-white rounded-md mb-6">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, error.
+      </p>
+      <input
+        id="submit"
+        type="submit"
+        class="bg-green-500 p-2 rounded-md border-2 border-emerald-300 hover:border-emerald-100 shadow-md" />
+    </form>
+  </body>
+</html>
