@@ -1,22 +1,60 @@
 //WORK IN PROGRESS!
 
 let input = document.getElementById("input");
-let submit = document.getElementById("submit");
-let cleanedOutput = document.getElementById("cleaned-output");
-let reversedOutput = document.getElementById("reversed-output");
 let output = document.getElementById("output");
-
-input.value = "";
-
-// submit.onclick = () => {
-//   let regex = /[^ -/:-@[-``]/gi;
-//   let extracted = input.value.match(regex);
-//   let cleanString = "";
-//   let splitString = "";
-//   let reversedString = "";
-
-// };
+let alphabet = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
 
 function handleSubmit() {
+  output.innerHTML = solve();
   console.log("hit submit button");
+  console.log(alphabet.length);
+}
+
+function solve() {
+  let encodedString = input.value.toUpperCase().trim();
+  let characters = encodedString.split("");
+  let converted = characters.map(convertLetters);
+  let answer = " ";
+  for (let i = 0; i < converted.length; i++) {
+    answer += converted[i];
+  }
+  console.log(converted);
+  console.log(answer);
+  return answer;
+}
+
+function convertLetters(character) {
+  // alphabet.find(character)
+  let index = alphabet.indexOf(character);
+  if (index === -1) {
+    return character;
+  }
+  return index > 12 ? alphabet[index + 13 - 26] : alphabet[index + 13];
 }
